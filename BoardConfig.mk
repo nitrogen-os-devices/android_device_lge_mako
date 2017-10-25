@@ -24,10 +24,13 @@ TARGET_NO_BOOTLOADER := true
 
 BOARD_KERNEL_BASE := 0x80200000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=mako lpj=67677 user_debug=31
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=mako lpj=67677 user_debug=31 androidboot.selinux=permissive
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01600000
 TARGET_KERNEL_SOURCE := kernel/qcom/msm8960
 TARGET_KERNEL_CONFIG := mako_defconfig
+BOARD_KERNEL_IMAGE_NAME := zImage
+KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin
 
 BOARD_USES_ALSA_AUDIO:= true
 
@@ -88,6 +91,8 @@ TARGET_USES_MEDIA_EXTENSIONS := true
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 
 DEVICE_MANIFEST_FILE := device/lge/mako/manifest.xml
+
+TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 
 TARGET_NEEDS_PLATFORM_TEXTRELS := true
 
