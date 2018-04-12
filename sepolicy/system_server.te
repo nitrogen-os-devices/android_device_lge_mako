@@ -28,3 +28,6 @@ allowxperm system_server self:socket ioctl msm_sock_ipc_ioctls;
 # Access /dev/graphics
 allow system_server graphics_device:chr_file rw_file_perms;
 allow system_server graphics_device:dir r_dir_perms;
+
+#For bootloop on data saver
+allow system_server default_prop:property_service set;
