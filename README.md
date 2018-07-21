@@ -23,7 +23,7 @@ git clone https://github.com/nitrogen-os-devices/android_kernel_lge_mako -b o2-l
 git clone https://github.com/TheMuppets/proprietary_vendor_lge -b lineage-15.1 vendor/lge/  
 
 # Clone audio HAL (note the destination folder)  
-rm -rf hardware/qcom/audio  	
+rm -rf hardware/qcom/audio  
 git clone https://github.com/LineageOS/android_hardware_qcom_audio -b lineage-15.1 hardware/qcom/audio/default  
 
 # To fix build error:
