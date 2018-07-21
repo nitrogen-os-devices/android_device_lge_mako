@@ -2,16 +2,16 @@
 # Force Sync to latest Nitrogen OS ROM source (branch: o2)
 
 # Changes needed for NFC to work
-cd hardware/interfaces/
-git remote add nitin https://github.com/nitin1438/android_hardware_interfaces
-git pull nitin o2
+cd hardware/interfaces/  
+git remote add nitin https://github.com/nitin1438/android_hardware_interfaces  
+git pull nitin o2  
 
 # Changes needed for GPS to work properly
 cd ~/nitrogen/hardware/qcom/gps/
 git remote add gps https://github.com/nitins-taimen/android_hardware_qcom_gps
 git pull gps o2
 
-# To fix build error:
+# To fix build error: https://pastebin.com/9Jmd0bhL
 # external/strace/xlat/v4l2_memories.h:23:8: error: use of undeclared identifier 'V4L2_MEMORY_DMABUF'; did you mean 'V4L2_MEMORY_MMAP'?
 cd ~/nitrogen/external/strace/
 git revert dc75b01004a0588c1eb3bc26d7248a6e473b2cdd
