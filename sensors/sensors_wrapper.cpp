@@ -25,6 +25,9 @@
 // Enable experimental flush support
 #define FLUSH_SUPPORT
 
+// Define EINVAL
+#define EINVAL          22
+
 static void *lib_handle = NULL;
 static struct sensors_module_t *lib_sensors_module;
 static struct hw_device_t *lib_hw_device;
