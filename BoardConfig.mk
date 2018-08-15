@@ -32,7 +32,7 @@ BOARD_KERNEL_IMAGE_NAME := zImage
 
 TARGET_GCC_VERSION_ARM := 4.8
 KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin
+KERNEL_TOOLCHAIN := ./prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin
 
 BOARD_USES_ALSA_AUDIO:= true
 
