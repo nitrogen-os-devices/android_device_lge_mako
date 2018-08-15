@@ -77,7 +77,34 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
 BOARD_VENDOR_QCOM_LOC_PDK_FEATURE_SET := true
 TARGET_NO_RPC := true
 
-BOARD_SEPOLICY_DIRS += device/lge/mako/sepolicy
+TARGET_RELEASETOOLS_EXTENSIONS := device/lge/mako
+
+BOARD_SEPOLICY_DIRS += \
+       device/lge/mako/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+       bluetooth_loader.te \
+       bridge.te \
+       camera.te \
+       conn_init.te \
+       device.te \
+       domain.te \
+       file.te \
+       file_contexts \
+       kickstart.te \
+       mediaserver.te \
+       mpdecision.te \
+       netmgrd.te \
+       qmux.te \
+       rild.te \
+       rmt.te \
+       sensors.te \
+       surfaceflinger.te \
+       system_server.te \
+       tee.te \
+       te_macros \
+       thermald.te \
+       ueventd.te
 
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
